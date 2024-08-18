@@ -16,9 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from mqtt_app import views
+from mqtt_app.views import StatusCountView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("status_count",views.status_count)
+    path("status_count",StatusCountView.as_view())
 ]
